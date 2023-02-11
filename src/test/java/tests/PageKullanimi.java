@@ -19,7 +19,7 @@ public class PageKullanimi {
         String actualSonuc = amazonPage.sonucYazisi.getText();
         String arananKelime = "iphone";
         assert actualSonuc.contains(arananKelime);
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
 }
