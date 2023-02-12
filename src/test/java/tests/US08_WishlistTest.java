@@ -1,13 +1,18 @@
 package tests;
 
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.US08_Wishlist;
+import utilities.C02_DropdownReusable;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US08_WishlistTest {
+public class US08_WishlistTest extends C02_DropdownReusable {
 
 //1-Kullanici,allure2you.com sayfasina gider
 //2-Kullanici arama kutusuna tiklar
@@ -29,7 +34,7 @@ public class US08_WishlistTest {
 //18-Kullanici PLACE ORDER butonuna tiklar
 //19-Kullanici THANK YOU YOUR ORDER HAS BEEN RECEIVED mesajini gorur
 
-
+WebDriver driver;
     @Test
     public void US08_Test() throws InterruptedException {
 
@@ -81,11 +86,30 @@ public class US08_WishlistTest {
         Thread.sleep(5000);
 
        assert us08Whishlist.shooppingCartPage.isDisplayed();
-       us08Whishlist.proceedToCheckout.click();
+       us08Whishlist.proceedToCheckout.sendKeys(Keys.ENTER);
+
+       assert us08Whishlist.checkoutPage.isDisplayed();
+
+       us08Whishlist.billingFirstName.sendKeys(ConfigReader.getProperty("firstName"));
+       us08Whishlist.billingLastName.sendKeys(ConfigReader.getProperty("lastName"));
+
+      // us08Whishlist.countryRegion.sendKeys(ConfigReader.getProperty("country"));
+
+       //selectFromDropdown(driver.findElement(By.xpath("//span[@id='select2-billing_country-container']")),"United States(US)");
+
+        us08Whishlist.streetAddress.sendKeys(ConfigReader.getProperty("street"));
+
+        us08Whishlist.town.sendKeys(ConfigReader.getProperty("city"));
+        us08Whishlist.postCode.sendKeys(ConfigReader.getProperty("zipcode"));
+        us08Whishlist.phoneNumber.sendKeys(ConfigReader.getProperty("phone"));
+        us08Whishlist.email.sendKeys(ConfigReader.getProperty("email"));
+
+        assert us08Whishlist.paymentMethods.isDisplayed();
 
 
+        us08Whishlist.placeOrder.submit();
 
-
+        assert us08Whishlist.orderMessage.isDisplayed();
 
 
 

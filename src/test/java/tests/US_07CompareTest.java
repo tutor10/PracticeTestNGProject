@@ -84,11 +84,6 @@ public class US_07CompareTest {
 
 
 
-//
-//        us07Compare.searchBox.sendKeys("Apple iPhone 12, 64GB, Siyah", Keys.ENTER);
-//        us07Compare.addToCartButton.click();
-
-        //Driver.getDriver().navigate().back();
 
 
     }

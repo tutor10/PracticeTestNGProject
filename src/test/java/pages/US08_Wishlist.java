@@ -61,6 +61,45 @@ public class US08_Wishlist {
     @FindBy(xpath = "//*[@class='checkout-button button alt wc-forward']")
     public WebElement proceedToCheckout;
 
+    @FindBy(xpath = "(//*[text()='Checkout'])[2]")
+    public WebElement checkoutPage;
+
+    @FindBy(xpath = "//*[@id='billing_first_name']")
+    public WebElement billingFirstName;
+
+    @FindBy(xpath = "//input[@id='billing_last_name']")
+    public WebElement billingLastName;
+
+    @FindBy(xpath = "//*[@title='United Kingdom (UK)']")
+    public WebElement countryRegion;
+
+    @FindBy(xpath = "//input[@id='billing_address_1']")
+    public WebElement streetAddress;
+
+    @FindBy(xpath = "//input[@id='billing_city']")
+    public WebElement town;
+
+    @FindBy(xpath = "//input[@id='billing_postcode']")
+    public WebElement postCode;
+
+    @FindBy(xpath = "//input[@id='billing_phone']")
+    public WebElement phoneNumber;
+
+    @FindBy(xpath = "//input[@id='billing_email']")
+    public WebElement email;
+
+    @FindBy(xpath = "//h4[normalize-space()='Payment Methods']")
+    public WebElement paymentMethods;
+
+//    @FindBy(xpath = "//*[@value='cod']")
+//    public WebElement payAtDoor;
+
+    @FindBy(xpath = "//button[@id='place_order']")
+    public WebElement placeOrder;
+
+    @FindBy(xpath = "//*[text()='Thank you. Your order has been received.']")
+    public WebElement orderMessage;
+
 
 
 

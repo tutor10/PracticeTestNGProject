@@ -47,5 +47,6 @@ public class US_07Compare {
     public WebElement addToCartButton;
 
 
+
 }
 
