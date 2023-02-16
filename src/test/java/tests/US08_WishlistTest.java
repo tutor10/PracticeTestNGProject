@@ -30,9 +30,9 @@ public class US08_WishlistTest extends C02_DropdownReusable {
 //14-Kullanici PROCEED TO CHECKOUT butonunu tiklar
 //15-Kullanici acilan sayfadaki tum bilgileri eksiksiz girer
 //16-Kullanici sayfada PAYMENT METHODS bolumunu gorur
-//17-Kullanici odeme yontemini secer
-//18-Kullanici PLACE ORDER butonuna tiklar
-//19-Kullanici THANK YOU YOUR ORDER HAS BEEN RECEIVED mesajini gorur
+
+//17-Kullanici PLACE ORDER butonuna tiklar
+//18-Kullanici THANK YOU YOUR ORDER HAS BEEN RECEIVED mesajini gorur
 
 WebDriver driver;
     @Test

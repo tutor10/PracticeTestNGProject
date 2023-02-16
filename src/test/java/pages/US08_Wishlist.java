@@ -91,8 +91,6 @@ public class US08_Wishlist {
     @FindBy(xpath = "//h4[normalize-space()='Payment Methods']")
     public WebElement paymentMethods;
 
-//    @FindBy(xpath = "//*[@value='cod']")
-//    public WebElement payAtDoor;
 
     @FindBy(xpath = "//button[@id='place_order']")
     public WebElement placeOrder;
