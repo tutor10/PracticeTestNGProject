@@ -12,7 +12,7 @@ import utilities.C02_DropdownReusable;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class US08_WishlistTest extends C02_DropdownReusable {
+public class US08_WishlistTest {
 
 //1-Kullanici,allure2you.com sayfasina gider
 //2-Kullanici arama kutusuna tiklar
