@@ -93,7 +93,7 @@ WebDriver driver;
        us08Whishlist.billingFirstName.sendKeys(ConfigReader.getProperty("firstName"));
        us08Whishlist.billingLastName.sendKeys(ConfigReader.getProperty("lastName"));
 
-      // us08Whishlist.countryRegion.sendKeys(ConfigReader.getProperty("country"));
+       //us08Whishlist.countryRegion.sendKeys(ConfigReader.getProperty("country"));
 
        //selectFromDropdown(driver.findElement(By.xpath("//span[@id='select2-billing_country-container']")),"United States(US)");
 

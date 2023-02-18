@@ -70,7 +70,7 @@ public class US08_Wishlist {
     @FindBy(xpath = "//input[@id='billing_last_name']")
     public WebElement billingLastName;
 
-    @FindBy(xpath = "//*[@title='United Kingdom (UK)']")
+    @FindBy(xpath = "//*[@id='select2-billing_country-container']")
     public WebElement countryRegion;
 
     @FindBy(xpath = "//input[@id='billing_address_1']")
