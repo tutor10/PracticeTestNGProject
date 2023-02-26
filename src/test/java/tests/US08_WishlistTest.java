@@ -1,14 +1,12 @@
 package tests;
 
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.US08_Wishlist;
-import utilities.C02_DropdownReusable;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -30,11 +28,10 @@ public class US08_WishlistTest {
 //14-Kullanici PROCEED TO CHECKOUT butonunu tiklar
 //15-Kullanici acilan sayfadaki tum bilgileri eksiksiz girer
 //16-Kullanici sayfada PAYMENT METHODS bolumunu gorur
-
 //17-Kullanici PLACE ORDER butonuna tiklar
 //18-Kullanici THANK YOU YOUR ORDER HAS BEEN RECEIVED mesajini gorur
 
-WebDriver driver;
+    WebDriver driver;
     @Test
     public void US08_Test() throws InterruptedException {
 
@@ -55,7 +52,7 @@ WebDriver driver;
 
         us08Whishlist.whishlistButton.click();
 
-//
+
         Assert.assertTrue(us08Whishlist.pageTitle.isDisplayed());//Whishlist
         Thread.sleep(3000);
 
@@ -85,24 +82,15 @@ WebDriver driver;
         assert us08Whishlist.secondProductDisplayed.isDisplayed();
         Thread.sleep(5000);
 
-       assert us08Whishlist.shooppingCartPage.isDisplayed();
-       us08Whishlist.proceedToCheckout.sendKeys(Keys.ENTER);
+        assert us08Whishlist.shooppingCartPage.isDisplayed();
+        us08Whishlist.proceedToCheckout.sendKeys(Keys.ENTER);
 
-       assert us08Whishlist.checkoutPage.isDisplayed();
+        assert us08Whishlist.checkoutPage.isDisplayed();
 
-       us08Whishlist.billingFirstName.sendKeys(ConfigReader.getProperty("firstName"));
-       us08Whishlist.billingLastName.sendKeys(ConfigReader.getProperty("lastName"));
 
-       //us08Whishlist.countryRegion.sendKeys(ConfigReader.getProperty("country"));
+        us08Whishlist.billingFirstName.sendKeys("Ugur",Keys.TAB,"Tastan",Keys.TAB,Keys.TAB,"United Kingdom",Keys.TAB);
+        us08Whishlist.streetAddress.sendKeys("Street 1",Keys.TAB,Keys.TAB,"London",Keys.TAB,Keys.TAB,"W1A 1AA",Keys.TAB,"+123333422", Keys.TAB,"abc@gmail.com",Keys.ENTER);
 
-       //selectFromDropdown(driver.findElement(By.xpath("//span[@id='select2-billing_country-container']")),"United States(US)");
-
-        us08Whishlist.streetAddress.sendKeys(ConfigReader.getProperty("street"));
-
-        us08Whishlist.town.sendKeys(ConfigReader.getProperty("city"));
-        us08Whishlist.postCode.sendKeys(ConfigReader.getProperty("zipcode"));
-        us08Whishlist.phoneNumber.sendKeys(ConfigReader.getProperty("phone"));
-        us08Whishlist.email.sendKeys(ConfigReader.getProperty("email"));
 
         assert us08Whishlist.paymentMethods.isDisplayed();
 
